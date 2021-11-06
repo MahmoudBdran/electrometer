@@ -10,7 +10,7 @@ import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 import 'package:open_file/open_file.dart';
-
+import '';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
@@ -70,7 +70,7 @@ class _MyAppState extends State<MyApp> {
                     pw.SizedBox(width: 100),
                     pw.Column(
                       children: [
-                        pw.Text("إيصال شحن كهرباء",
+                        pw.Text("إيصال شحن مياة",
                             textDirection: pw.TextDirection.rtl,
                             style: pw.TextStyle(fontSize: 15, font: ttf)),
                         pw.Row(children: [
