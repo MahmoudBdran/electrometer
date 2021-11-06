@@ -1,0 +1,10 @@
+^E:\FLUTTER_PROJECTS\EXCELAPP\BUILD\WINDOWS\CMAKEFILES\DEB47B63665287A4273F070ED6995CC9\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SE:/flutter_projects/excelapp/windows -BE:/flutter_projects/excelapp/build/windows --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file E:/flutter_projects/excelapp/build/windows/excelapp.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

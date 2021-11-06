@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Flutter Plugins" type="FlutterPluginsLibraryType">
+    <CLASSES>
+      <root url="file://C:/flutter/.pub-cache/hosted/pub.dartlang.org/open_file-3.2.1" />
+      <root url="file://C:/flutter/.pub-cache/hosted/pub.dartlang.org/syncfusion_flutter_pdfviewer_web-19.3.48-beta" />
+      <root url="file://C:/flutter/.pub-cache/hosted/pub.dartlang.org/syncfusion_flutter_pdfviewer-19.3.48-beta" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,10 @@
+^E:\FLUTTER_PROJECTS\EXCELAPP\BUILD\WINDOWS\CMAKEFILES\DEB47B63665287A4273F070ED6995CC9\INSTALL_FORCE.RULE
+setlocal
+cd .
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

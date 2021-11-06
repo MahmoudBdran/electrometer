@@ -1,0 +1,517 @@
+define(['dart_sdk', 'packages/flutter/src/painting/edge_insets.dart', 'packages/flutter/src/widgets/widget_span.dart', 'packages/flutter/src/gestures/scale.dart', 'packages/flutter/src/widgets/interactive_viewer.dart', 'packages/flutter/src/gestures/tap.dart'], (function load__packages__syncfusion_flutter_core__interactive_scroll_viewer_internal_dart(dart_sdk, packages__flutter__src__painting__edge_insets$46dart, packages__flutter__src__widgets__widget_span$46dart, packages__flutter__src__gestures__scale$46dart, packages__flutter__src__widgets__interactive_viewer$46dart, packages__flutter__src__gestures__tap$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const ui = dart_sdk.ui;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const edge_insets = packages__flutter__src__painting__edge_insets$46dart.src__painting__edge_insets;
+  const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
+  const gesture_detector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__gesture_detector;
+  const widget_inspector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__widget_inspector;
+  const scale = packages__flutter__src__gestures__scale$46dart.src__gestures__scale;
+  const interactive_viewer = packages__flutter__src__widgets__interactive_viewer$46dart.src__widgets__interactive_viewer;
+  const tap = packages__flutter__src__gestures__tap$46dart.src__gestures__tap;
+  var interactive_scroll_viewer_internal = Object.create(dart.library);
+  var $clamp = dartx.clamp;
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    _LocationL: () => (T._LocationL = dart.constFn(dart.legacy(widget_inspector._Location)))()
+  };
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: ui.Clip.prototype,
+        [_name]: "Clip.hardEdge",
+        index: 1
+      });
+    },
+    get C1() {
+      return C[1] = dart.const({
+        __proto__: edge_insets.EdgeInsets.prototype,
+        [EdgeInsets_bottom]: 0,
+        [EdgeInsets_right]: 0,
+        [EdgeInsets_top]: 0,
+        [EdgeInsets_left]: 0
+      });
+    },
+    get C4() {
+      return C[4] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "minScale",
+        [_Location_column]: 9,
+        [_Location_line]: 290,
+        [_Location_file]: null
+      });
+    },
+    get C5() {
+      return C[5] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "maxScale",
+        [_Location_column]: 9,
+        [_Location_line]: 291,
+        [_Location_file]: null
+      });
+    },
+    get C6() {
+      return C[6] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "constrained",
+        [_Location_column]: 9,
+        [_Location_line]: 292,
+        [_Location_file]: null
+      });
+    },
+    get C7() {
+      return C[7] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onInteractionStart",
+        [_Location_column]: 9,
+        [_Location_line]: 293,
+        [_Location_file]: null
+      });
+    },
+    get C8() {
+      return C[8] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onInteractionUpdate",
+        [_Location_column]: 9,
+        [_Location_line]: 294,
+        [_Location_file]: null
+      });
+    },
+    get C9() {
+      return C[9] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onInteractionEnd",
+        [_Location_column]: 9,
+        [_Location_line]: 295,
+        [_Location_file]: null
+      });
+    },
+    get C10() {
+      return C[10] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "scaleEnabled",
+        [_Location_column]: 9,
+        [_Location_line]: 296,
+        [_Location_file]: null
+      });
+    },
+    get C11() {
+      return C[11] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "panEnabled",
+        [_Location_column]: 9,
+        [_Location_line]: 297,
+        [_Location_file]: null
+      });
+    },
+    get C12() {
+      return C[12] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "alignPanAxis",
+        [_Location_column]: 9,
+        [_Location_line]: 298,
+        [_Location_file]: null
+      });
+    },
+    get C13() {
+      return C[13] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "transformationController",
+        [_Location_column]: 9,
+        [_Location_line]: 299,
+        [_Location_file]: null
+      });
+    },
+    get C14() {
+      return C[14] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "boundaryMargin",
+        [_Location_column]: 9,
+        [_Location_line]: 300,
+        [_Location_file]: null
+      });
+    },
+    get C15() {
+      return C[15] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "clipBehavior",
+        [_Location_column]: 9,
+        [_Location_line]: 301,
+        [_Location_file]: null
+      });
+    },
+    get C16() {
+      return C[16] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 9,
+        [_Location_line]: 302,
+        [_Location_file]: null
+      });
+    },
+    get C3() {
+      return C[3] = dart.constList([C[4] || CT.C4, C[5] || CT.C5, C[6] || CT.C6, C[7] || CT.C7, C[8] || CT.C8, C[9] || CT.C9, C[10] || CT.C10, C[11] || CT.C11, C[12] || CT.C12, C[13] || CT.C13, C[14] || CT.C14, C[15] || CT.C15, C[16] || CT.C16], T._LocationL());
+    },
+    get C2() {
+      return C[2] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[3] || CT.C3,
+        [_Location_name]: null,
+        [_Location_column]: 14,
+        [_Location_line]: 289,
+        [_Location_file]: "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/syncfusion_flutter_core-19.3.48/lib/src/widgets/interactive_scroll_viewer.dart"
+      });
+    },
+    get C19() {
+      return C[19] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onDoubleTapDown",
+        [_Location_column]: 7,
+        [_Location_line]: 286,
+        [_Location_file]: null
+      });
+    },
+    get C20() {
+      return C[20] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onDoubleTap",
+        [_Location_column]: 7,
+        [_Location_line]: 288,
+        [_Location_file]: null
+      });
+    },
+    get C21() {
+      return C[21] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 7,
+        [_Location_line]: 289,
+        [_Location_file]: null
+      });
+    },
+    get C18() {
+      return C[18] = dart.constList([C[19] || CT.C19, C[20] || CT.C20, C[21] || CT.C21], T._LocationL());
+    },
+    get C17() {
+      return C[17] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[18] || CT.C18,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 285,
+        [_Location_file]: "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/syncfusion_flutter_core-19.3.48/lib/src/widgets/interactive_scroll_viewer.dart"
+      });
+    }
+  }, false);
+  var C = Array(22).fill(void 0);
+  var I = [
+    "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/syncfusion_flutter_core-19.3.48/lib/src/widgets/interactive_scroll_viewer.dart",
+    "package:syncfusion_flutter_core/interactive_scroll_viewer_internal.dart"
+  ];
+  var constrained$ = dart.privateName(interactive_scroll_viewer_internal, "InteractiveScrollViewer.constrained");
+  var clipBehavior$ = dart.privateName(interactive_scroll_viewer_internal, "InteractiveScrollViewer.clipBehavior");
+  var alignPanAxis$ = dart.privateName(interactive_scroll_viewer_internal, "InteractiveScrollViewer.alignPanAxis");
+  var boundaryMargin$ = dart.privateName(interactive_scroll_viewer_internal, "InteractiveScrollViewer.boundaryMargin");
+  var child$ = dart.privateName(interactive_scroll_viewer_internal, "InteractiveScrollViewer.child");
+  var panEnabled$ = dart.privateName(interactive_scroll_viewer_internal, "InteractiveScrollViewer.panEnabled");
+  var scaleEnabled$ = dart.privateName(interactive_scroll_viewer_internal, "InteractiveScrollViewer.scaleEnabled");
+  var maxScale$ = dart.privateName(interactive_scroll_viewer_internal, "InteractiveScrollViewer.maxScale");
+  var minScale$ = dart.privateName(interactive_scroll_viewer_internal, "InteractiveScrollViewer.minScale");
+  var onInteractionStart$ = dart.privateName(interactive_scroll_viewer_internal, "InteractiveScrollViewer.onInteractionStart");
+  var onInteractionUpdate$ = dart.privateName(interactive_scroll_viewer_internal, "InteractiveScrollViewer.onInteractionUpdate");
+  var onInteractionEnd$ = dart.privateName(interactive_scroll_viewer_internal, "InteractiveScrollViewer.onInteractionEnd");
+  var transformationController$ = dart.privateName(interactive_scroll_viewer_internal, "InteractiveScrollViewer.transformationController");
+  var enableDoubleTapZooming$ = dart.privateName(interactive_scroll_viewer_internal, "InteractiveScrollViewer.enableDoubleTapZooming");
+  var onDoubleTapZoomInvoked$ = dart.privateName(interactive_scroll_viewer_internal, "InteractiveScrollViewer.onDoubleTapZoomInvoked");
+  var _name = dart.privateName(ui, "_name");
+  var EdgeInsets_bottom = dart.privateName(edge_insets, "EdgeInsets.bottom");
+  var EdgeInsets_right = dart.privateName(edge_insets, "EdgeInsets.right");
+  var EdgeInsets_top = dart.privateName(edge_insets, "EdgeInsets.top");
+  var EdgeInsets_left = dart.privateName(edge_insets, "EdgeInsets.left");
+  interactive_scroll_viewer_internal.InteractiveScrollViewer = class InteractiveScrollViewer extends framework.StatefulWidget {
+    get constrained() {
+      return this[constrained$];
+    }
+    set constrained(value) {
+      super.constrained = value;
+    }
+    get clipBehavior() {
+      return this[clipBehavior$];
+    }
+    set clipBehavior(value) {
+      super.clipBehavior = value;
+    }
+    get alignPanAxis() {
+      return this[alignPanAxis$];
+    }
+    set alignPanAxis(value) {
+      super.alignPanAxis = value;
+    }
+    get boundaryMargin() {
+      return this[boundaryMargin$];
+    }
+    set boundaryMargin(value) {
+      super.boundaryMargin = value;
+    }
+    get child() {
+      return this[child$];
+    }
+    set child(value) {
+      super.child = value;
+    }
+    get panEnabled() {
+      return this[panEnabled$];
+    }
+    set panEnabled(value) {
+      super.panEnabled = value;
+    }
+    get scaleEnabled() {
+      return this[scaleEnabled$];
+    }
+    set scaleEnabled(value) {
+      super.scaleEnabled = value;
+    }
+    get maxScale() {
+      return this[maxScale$];
+    }
+    set maxScale(value) {
+      super.maxScale = value;
+    }
+    get minScale() {
+      return this[minScale$];
+    }
+    set minScale(value) {
+      super.minScale = value;
+    }
+    get onInteractionStart() {
+      return this[onInteractionStart$];
+    }
+    set onInteractionStart(value) {
+      super.onInteractionStart = value;
+    }
+    get onInteractionUpdate() {
+      return this[onInteractionUpdate$];
+    }
+    set onInteractionUpdate(value) {
+      super.onInteractionUpdate = value;
+    }
+    get onInteractionEnd() {
+      return this[onInteractionEnd$];
+    }
+    set onInteractionEnd(value) {
+      super.onInteractionEnd = value;
+    }
+    get transformationController() {
+      return this[transformationController$];
+    }
+    set transformationController(value) {
+      super.transformationController = value;
+    }
+    get enableDoubleTapZooming() {
+      return this[enableDoubleTapZooming$];
+    }
+    set enableDoubleTapZooming(value) {
+      super.enableDoubleTapZooming = value;
+    }
+    get onDoubleTapZoomInvoked() {
+      return this[onDoubleTapZoomInvoked$];
+    }
+    set onDoubleTapZoomInvoked(value) {
+      super.onDoubleTapZoomInvoked = value;
+    }
+    createState() {
+      return new interactive_scroll_viewer_internal.InteractiveScrollViewerState.new();
+    }
+  };
+  (interactive_scroll_viewer_internal.InteractiveScrollViewer.new = function(child, opts) {
+    if (child == null) dart.nullFailed(I[0], 11, 38, "child");
+    let key = opts && 'key' in opts ? opts.key : null;
+    let clipBehavior = opts && 'clipBehavior' in opts ? opts.clipBehavior : C[0] || CT.C0;
+    if (clipBehavior == null) dart.nullFailed(I[0], 13, 12, "clipBehavior");
+    let onDoubleTapZoomInvoked = opts && 'onDoubleTapZoomInvoked' in opts ? opts.onDoubleTapZoomInvoked : null;
+    let alignPanAxis = opts && 'alignPanAxis' in opts ? opts.alignPanAxis : false;
+    if (alignPanAxis == null) dart.nullFailed(I[0], 15, 12, "alignPanAxis");
+    let boundaryMargin = opts && 'boundaryMargin' in opts ? opts.boundaryMargin : C[1] || CT.C1;
+    if (boundaryMargin == null) dart.nullFailed(I[0], 16, 12, "boundaryMargin");
+    let maxScale = opts && 'maxScale' in opts ? opts.maxScale : 3;
+    if (maxScale == null) dart.nullFailed(I[0], 19, 12, "maxScale");
+    let minScale = opts && 'minScale' in opts ? opts.minScale : 1;
+    if (minScale == null) dart.nullFailed(I[0], 20, 12, "minScale");
+    let onInteractionStart = opts && 'onInteractionStart' in opts ? opts.onInteractionStart : null;
+    let onInteractionUpdate = opts && 'onInteractionUpdate' in opts ? opts.onInteractionUpdate : null;
+    let onInteractionEnd = opts && 'onInteractionEnd' in opts ? opts.onInteractionEnd : null;
+    let panEnabled = opts && 'panEnabled' in opts ? opts.panEnabled : true;
+    if (panEnabled == null) dart.nullFailed(I[0], 24, 12, "panEnabled");
+    let scaleEnabled = opts && 'scaleEnabled' in opts ? opts.scaleEnabled : true;
+    if (scaleEnabled == null) dart.nullFailed(I[0], 25, 12, "scaleEnabled");
+    let constrained = opts && 'constrained' in opts ? opts.constrained : true;
+    if (constrained == null) dart.nullFailed(I[0], 26, 12, "constrained");
+    let enableDoubleTapZooming = opts && 'enableDoubleTapZooming' in opts ? opts.enableDoubleTapZooming : true;
+    if (enableDoubleTapZooming == null) dart.nullFailed(I[0], 27, 12, "enableDoubleTapZooming");
+    let transformationController = opts && 'transformationController' in opts ? opts.transformationController : null;
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    this[child$] = child;
+    this[clipBehavior$] = clipBehavior;
+    this[onDoubleTapZoomInvoked$] = onDoubleTapZoomInvoked;
+    this[alignPanAxis$] = alignPanAxis;
+    this[boundaryMargin$] = boundaryMargin;
+    this[maxScale$] = maxScale;
+    this[minScale$] = minScale;
+    this[onInteractionStart$] = onInteractionStart;
+    this[onInteractionUpdate$] = onInteractionUpdate;
+    this[onInteractionEnd$] = onInteractionEnd;
+    this[panEnabled$] = panEnabled;
+    this[scaleEnabled$] = scaleEnabled;
+    this[constrained$] = constrained;
+    this[enableDoubleTapZooming$] = enableDoubleTapZooming;
+    this[transformationController$] = transformationController;
+    interactive_scroll_viewer_internal.InteractiveScrollViewer.__proto__.new.call(this, {key: key, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = interactive_scroll_viewer_internal.InteractiveScrollViewer.prototype;
+  dart.addTypeTests(interactive_scroll_viewer_internal.InteractiveScrollViewer);
+  dart.addTypeCaches(interactive_scroll_viewer_internal.InteractiveScrollViewer);
+  dart.setMethodSignature(interactive_scroll_viewer_internal.InteractiveScrollViewer, () => ({
+    __proto__: dart.getMethods(interactive_scroll_viewer_internal.InteractiveScrollViewer.__proto__),
+    createState: dart.fnType(interactive_scroll_viewer_internal.InteractiveScrollViewerState, [])
+  }));
+  dart.setLibraryUri(interactive_scroll_viewer_internal.InteractiveScrollViewer, I[1]);
+  dart.setFieldSignature(interactive_scroll_viewer_internal.InteractiveScrollViewer, () => ({
+    __proto__: dart.getFields(interactive_scroll_viewer_internal.InteractiveScrollViewer.__proto__),
+    constrained: dart.finalFieldType(core.bool),
+    clipBehavior: dart.finalFieldType(ui.Clip),
+    alignPanAxis: dart.finalFieldType(core.bool),
+    boundaryMargin: dart.finalFieldType(edge_insets.EdgeInsets),
+    child: dart.finalFieldType(framework.Widget),
+    panEnabled: dart.finalFieldType(core.bool),
+    scaleEnabled: dart.finalFieldType(core.bool),
+    maxScale: dart.finalFieldType(core.double),
+    minScale: dart.finalFieldType(core.double),
+    onInteractionStart: dart.finalFieldType(dart.nullable(dart.fnType(dart.void, [scale.ScaleStartDetails]))),
+    onInteractionUpdate: dart.finalFieldType(dart.nullable(dart.fnType(dart.void, [scale.ScaleUpdateDetails]))),
+    onInteractionEnd: dart.finalFieldType(dart.nullable(dart.fnType(dart.void, [scale.ScaleEndDetails]))),
+    transformationController: dart.finalFieldType(dart.nullable(interactive_viewer.TransformationController)),
+    enableDoubleTapZooming: dart.finalFieldType(core.bool),
+    onDoubleTapZoomInvoked: dart.finalFieldType(dart.nullable(dart.fnType(ui.Offset, [ui.Offset, ui.Offset])))
+  }));
+  var _tapPosition = dart.privateName(interactive_scroll_viewer_internal, "_tapPosition");
+  var _handleDoubleTapDown = dart.privateName(interactive_scroll_viewer_internal, "_handleDoubleTapDown");
+  var _handleDoubleTap = dart.privateName(interactive_scroll_viewer_internal, "_handleDoubleTap");
+  var _Location_parameterLocations = dart.privateName(widget_inspector, "_Location.parameterLocations");
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  interactive_scroll_viewer_internal.InteractiveScrollViewerState = class InteractiveScrollViewerState extends framework.State$(interactive_scroll_viewer_internal.InteractiveScrollViewer) {
+    scrollTo(offset) {
+      let t1, t0;
+      if (offset == null) dart.nullFailed(I[0], 184, 24, "offset");
+      if (this.widget.transformationController != null) {
+        let previousOffset = dart.nullCheck(this.widget.transformationController).toScene(ui.Offset.zero);
+        t0 = this.widget.transformationController;
+        t0 == null ? null : t0.value = (t1 = dart.nullCheck(this.widget.transformationController).value.clone(), (() => {
+          t1.translate(dart.notNull(previousOffset.dx) - dart.notNull(offset.dx), dart.notNull(previousOffset.dy) - dart.notNull(offset.dy));
+          return t1;
+        })());
+      }
+    }
+    scaleTo(scale) {
+      let t1, t0;
+      if (scale == null) dart.nullFailed(I[0], 225, 23, "scale");
+      if (this.widget.transformationController != null) {
+        scale = scale[$clamp](this.widget.minScale, this.widget.maxScale);
+        let zoomLevel = dart.nullCheck(this.widget.transformationController).value.getMaxScaleOnAxis();
+        let previousOffset = dart.nullCheck(this.widget.transformationController).toScene(ui.Offset.zero);
+        t0 = this.widget.transformationController;
+        t0 == null ? null : t0.value = (t1 = dart.nullCheck(this.widget.transformationController).value.clone(), (() => {
+          t1.scale(dart.notNull(scale) / dart.notNull(zoomLevel), dart.notNull(scale) / dart.notNull(zoomLevel));
+          return t1;
+        })());
+        this.scrollTo(previousOffset);
+      }
+    }
+    [_handleDoubleTapDown](details) {
+      if (details == null) dart.nullFailed(I[0], 240, 44, "details");
+      this[_tapPosition] = details.localPosition;
+    }
+    [_handleDoubleTap]() {
+      if (this.widget.transformationController != null) {
+        let zoomLevel = dart.nullCheck(this.widget.transformationController).value.getMaxScaleOnAxis();
+        let normalizedOffset = null;
+        let offset = null;
+        if (dart.notNull(zoomLevel) <= 1) {
+          normalizedOffset = this[_tapPosition]._negate()['-'](dart.nullCheck(this.widget.transformationController).toScene(ui.Offset.zero)['*'](zoomLevel))['/'](zoomLevel);
+          this.scaleTo(2);
+          offset = this[_tapPosition]._negate()['-'](normalizedOffset['*'](2))['/'](2);
+          if (this.widget.onDoubleTapZoomInvoked != null) {
+            offset = dart.nullCheck(this.widget.onDoubleTapZoomInvoked)(offset, this[_tapPosition]);
+          }
+          this.scrollTo(offset);
+        } else {
+          normalizedOffset = this[_tapPosition]._negate()['-'](dart.nullCheck(this.widget.transformationController).toScene(ui.Offset.zero)['*'](zoomLevel))['/'](zoomLevel);
+          this.scaleTo(1);
+          offset = this[_tapPosition]._negate()['-'](normalizedOffset['*'](1))['/'](1);
+          if (this.widget.onDoubleTapZoomInvoked != null) {
+            offset = dart.nullCheck(this.widget.onDoubleTapZoomInvoked)(offset, this[_tapPosition]);
+          }
+          this.scrollTo(offset);
+        }
+      }
+    }
+    build(context) {
+      if (context == null) dart.nullFailed(I[0], 284, 29, "context");
+      return new gesture_detector.GestureDetector.new({onDoubleTapDown: dart.test(this.widget.enableDoubleTapZooming) ? dart.bind(this, _handleDoubleTapDown) : null, onDoubleTap: dart.test(this.widget.enableDoubleTapZooming) ? dart.bind(this, _handleDoubleTap) : null, child: new interactive_viewer.InteractiveViewer.new({minScale: this.widget.minScale, maxScale: this.widget.maxScale, constrained: this.widget.constrained, onInteractionStart: this.widget.onInteractionStart, onInteractionUpdate: this.widget.onInteractionUpdate, onInteractionEnd: this.widget.onInteractionEnd, scaleEnabled: this.widget.scaleEnabled, panEnabled: this.widget.panEnabled, alignPanAxis: this.widget.alignPanAxis, transformationController: this.widget.transformationController, boundaryMargin: this.widget.boundaryMargin, clipBehavior: this.widget.clipBehavior, child: this.widget.child, $creationLocationd_0dea112b090073317d4: C[2] || CT.C2}), $creationLocationd_0dea112b090073317d4: C[17] || CT.C17});
+    }
+  };
+  (interactive_scroll_viewer_internal.InteractiveScrollViewerState.new = function() {
+    this[_tapPosition] = ui.Offset.zero;
+    interactive_scroll_viewer_internal.InteractiveScrollViewerState.__proto__.new.call(this);
+    ;
+  }).prototype = interactive_scroll_viewer_internal.InteractiveScrollViewerState.prototype;
+  dart.addTypeTests(interactive_scroll_viewer_internal.InteractiveScrollViewerState);
+  dart.addTypeCaches(interactive_scroll_viewer_internal.InteractiveScrollViewerState);
+  dart.setMethodSignature(interactive_scroll_viewer_internal.InteractiveScrollViewerState, () => ({
+    __proto__: dart.getMethods(interactive_scroll_viewer_internal.InteractiveScrollViewerState.__proto__),
+    scrollTo: dart.fnType(dart.void, [ui.Offset]),
+    scaleTo: dart.fnType(dart.void, [core.double]),
+    [_handleDoubleTapDown]: dart.fnType(dart.void, [tap.TapDownDetails]),
+    [_handleDoubleTap]: dart.fnType(dart.void, []),
+    build: dart.fnType(framework.Widget, [framework.BuildContext])
+  }));
+  dart.setLibraryUri(interactive_scroll_viewer_internal.InteractiveScrollViewerState, I[1]);
+  dart.setFieldSignature(interactive_scroll_viewer_internal.InteractiveScrollViewerState, () => ({
+    __proto__: dart.getFields(interactive_scroll_viewer_internal.InteractiveScrollViewerState.__proto__),
+    [_tapPosition]: dart.fieldType(ui.Offset)
+  }));
+  dart.trackLibraries("packages/syncfusion_flutter_core/interactive_scroll_viewer_internal.dart", {
+    "package:syncfusion_flutter_core/interactive_scroll_viewer_internal.dart": interactive_scroll_viewer_internal
+  }, {
+    "package:syncfusion_flutter_core/interactive_scroll_viewer_internal.dart": ["src/widgets/interactive_scroll_viewer.dart"]
+  }, '{"version":3,"sourceRoot":"","sources":["src/widgets/interactive_scroll_viewer.dart"],"names":[],"mappings":"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","file":"../../../../../../../E:/packages/syncfusion_flutter_core/interactive_scroll_viewer_internal.dart.lib.js"}');
+  // Exports:
+  return {
+    interactive_scroll_viewer_internal: interactive_scroll_viewer_internal
+  };
+}));
+
+//# sourceMappingURL=interactive_scroll_viewer_internal.dart.lib.js.map

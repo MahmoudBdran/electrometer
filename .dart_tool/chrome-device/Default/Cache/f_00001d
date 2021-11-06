@@ -1,0 +1,1050 @@
+define(['dart_sdk', 'packages/flutter/src/widgets/widget_span.dart', 'packages/syncfusion_flutter_core/src/theme/theme_widget.dart', 'packages/syncfusion_flutter_pdfviewer/src/common/pdfviewer_helper.dart', 'packages/flutter/src/painting/box_decoration.dart', 'packages/flutter/src/painting/box_border.dart', 'packages/flutter/src/painting/borders.dart', 'packages/flutter/src/material/icon_button.dart', 'packages/flutter/src/widgets/icon.dart', 'packages/flutter/src/material/icons.dart', 'packages/flutter/src/rendering/paragraph.dart', 'packages/flutter/src/services/mouse_cursor.dart', 'packages/flutter/src/gestures/events.dart', 'packages/flutter/src/gestures/tap.dart', 'packages/flutter/src/gestures/drag_details.dart'], (function load__packages__syncfusion_flutter_pdfviewer__src__bookmark__bookmark_item_dart(dart_sdk, packages__flutter__src__widgets__widget_span$46dart, packages__syncfusion_flutter_core__src__theme__theme_widget$46dart, packages__syncfusion_flutter_pdfviewer__src__common__pdfviewer_helper$46dart, packages__flutter__src__painting__box_decoration$46dart, packages__flutter__src__painting__box_border$46dart, packages__flutter__src__painting__borders$46dart, packages__flutter__src__material__icon_button$46dart, packages__flutter__src__widgets__icon$46dart, packages__flutter__src__material__icons$46dart, packages__flutter__src__rendering__paragraph$46dart, packages__flutter__src__services__mouse_cursor$46dart, packages__flutter__src__gestures__events$46dart, packages__flutter__src__gestures__tap$46dart, packages__flutter__src__gestures__drag_details$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const _internal = dart_sdk._internal;
+  const ui = dart_sdk.ui;
+  const _interceptors = dart_sdk._interceptors;
+  const io = dart_sdk.io;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
+  const gesture_detector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__gesture_detector;
+  const container = packages__flutter__src__widgets__widget_span$46dart.src__widgets__container;
+  const basic = packages__flutter__src__widgets__widget_span$46dart.src__widgets__basic;
+  const visibility = packages__flutter__src__widgets__widget_span$46dart.src__widgets__visibility;
+  const widget_inspector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__widget_inspector;
+  const text = packages__flutter__src__widgets__widget_span$46dart.src__widgets__text;
+  const pdfviewer_theme = packages__syncfusion_flutter_core__src__theme__theme_widget$46dart.src__theme__pdfviewer_theme;
+  const pdfviewer_helper = packages__syncfusion_flutter_pdfviewer__src__common__pdfviewer_helper$46dart.src__common__pdfviewer_helper;
+  const box_decoration = packages__flutter__src__painting__box_decoration$46dart.src__painting__box_decoration;
+  const box_border = packages__flutter__src__painting__box_border$46dart.src__painting__box_border;
+  const borders = packages__flutter__src__painting__borders$46dart.src__painting__borders;
+  const button = packages__flutter__src__material__icon_button$46dart.src__material__button;
+  const icon = packages__flutter__src__widgets__icon$46dart.src__widgets__icon;
+  const icons = packages__flutter__src__material__icons$46dart.src__material__icons;
+  const paragraph = packages__flutter__src__rendering__paragraph$46dart.src__rendering__paragraph;
+  const mouse_cursor = packages__flutter__src__services__mouse_cursor$46dart.src__services__mouse_cursor;
+  const events = packages__flutter__src__gestures__events$46dart.src__gestures__events;
+  const tap = packages__flutter__src__gestures__tap$46dart.src__gestures__tap;
+  const drag_details = packages__flutter__src__gestures__drag_details$46dart.src__gestures__drag_details;
+  var bookmark_item = Object.create(dart.library);
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    VoidTovoid: () => (T.VoidTovoid = dart.constFn(dart.fnType(dart.void, [])))(),
+    _LocationL: () => (T._LocationL = dart.constFn(dart.legacy(widget_inspector._Location)))(),
+    JSArrayOfWidget: () => (T.JSArrayOfWidget = dart.constFn(_interceptors.JSArray$(framework.Widget)))(),
+    PointerEnterEventTovoid: () => (T.PointerEnterEventTovoid = dart.constFn(dart.fnType(dart.void, [events.PointerEnterEvent])))(),
+    PointerExitEventTovoid: () => (T.PointerExitEventTovoid = dart.constFn(dart.fnType(dart.void, [events.PointerExitEvent])))()
+  };
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4278190080.0
+      });
+    },
+    get C2() {
+      return C[2] = dart.const({
+        __proto__: box_border.BoxShape.prototype,
+        [_name]: "BoxShape.rectangle",
+        index: 0
+      });
+    },
+    get C1() {
+      return C[1] = dart.const({
+        __proto__: box_decoration.BoxDecoration.prototype,
+        [BoxDecoration_shape]: C[2] || CT.C2,
+        [BoxDecoration_backgroundBlendMode]: null,
+        [BoxDecoration_gradient]: null,
+        [BoxDecoration_boxShadow]: null,
+        [BoxDecoration_borderRadius]: null,
+        [BoxDecoration_border]: null,
+        [BoxDecoration_image]: null,
+        [BoxDecoration_color]: null
+      });
+    },
+    get C5() {
+      return C[5] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 27,
+        [_Location_line]: 193,
+        [_Location_file]: null
+      });
+    },
+    get C6() {
+      return C[6] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "size",
+        [_Location_column]: 21,
+        [_Location_line]: 194,
+        [_Location_file]: null
+      });
+    },
+    get C7() {
+      return C[7] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 21,
+        [_Location_line]: 195,
+        [_Location_file]: null
+      });
+    },
+    get C8() {
+      return C[8] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "semanticLabel",
+        [_Location_column]: 21,
+        [_Location_line]: 196,
+        [_Location_file]: null
+      });
+    },
+    get C4() {
+      return C[4] = dart.constList([C[5] || CT.C5, C[6] || CT.C6, C[7] || CT.C7, C[8] || CT.C8], T._LocationL());
+    },
+    get C3() {
+      return C[3] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[4] || CT.C4,
+        [_Location_name]: null,
+        [_Location_column]: 26,
+        [_Location_line]: 192,
+        [_Location_file]: "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/syncfusion_flutter_pdfviewer-19.3.48-beta/lib/src/bookmark/bookmark_item.dart"
+      });
+    },
+    get C11() {
+      return C[11] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onPressed",
+        [_Location_column]: 19,
+        [_Location_line]: 191,
+        [_Location_file]: null
+      });
+    },
+    get C12() {
+      return C[12] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 19,
+        [_Location_line]: 192,
+        [_Location_file]: null
+      });
+    },
+    get C10() {
+      return C[10] = dart.constList([C[11] || CT.C11, C[12] || CT.C12], T._LocationL());
+    },
+    get C9() {
+      return C[9] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[10] || CT.C10,
+        [_Location_name]: null,
+        [_Location_column]: 24,
+        [_Location_line]: 190,
+        [_Location_file]: "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/syncfusion_flutter_pdfviewer-19.3.48-beta/lib/src/bookmark/bookmark_item.dart"
+      });
+    },
+    get C15() {
+      return C[15] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "top",
+        [_Location_column]: 17,
+        [_Location_line]: 186,
+        [_Location_file]: null
+      });
+    },
+    get C16() {
+      return C[16] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "left",
+        [_Location_column]: 17,
+        [_Location_line]: 187,
+        [_Location_file]: null
+      });
+    },
+    get C17() {
+      return C[17] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 17,
+        [_Location_line]: 188,
+        [_Location_file]: null
+      });
+    },
+    get C18() {
+      return C[18] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "width",
+        [_Location_column]: 17,
+        [_Location_line]: 189,
+        [_Location_file]: null
+      });
+    },
+    get C19() {
+      return C[19] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 17,
+        [_Location_line]: 190,
+        [_Location_file]: null
+      });
+    },
+    get C14() {
+      return C[14] = dart.constList([C[15] || CT.C15, C[16] || CT.C16, C[17] || CT.C17, C[18] || CT.C18, C[19] || CT.C19], T._LocationL());
+    },
+    get C13() {
+      return C[13] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[14] || CT.C14,
+        [_Location_name]: null,
+        [_Location_column]: 22,
+        [_Location_line]: 185,
+        [_Location_file]: "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/syncfusion_flutter_pdfviewer-19.3.48-beta/lib/src/bookmark/bookmark_item.dart"
+      });
+    },
+    get C22() {
+      return C[22] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "visible",
+        [_Location_column]: 15,
+        [_Location_line]: 184,
+        [_Location_file]: null
+      });
+    },
+    get C23() {
+      return C[23] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 15,
+        [_Location_line]: 185,
+        [_Location_file]: null
+      });
+    },
+    get C21() {
+      return C[21] = dart.constList([C[22] || CT.C22, C[23] || CT.C23], T._LocationL());
+    },
+    get C20() {
+      return C[20] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[21] || CT.C21,
+        [_Location_name]: null,
+        [_Location_column]: 13,
+        [_Location_line]: 183,
+        [_Location_file]: "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/syncfusion_flutter_pdfviewer-19.3.48-beta/lib/src/bookmark/bookmark_item.dart"
+      });
+    },
+    get C26() {
+      return C[26] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 24,
+        [_Location_line]: 206,
+        [_Location_file]: null
+      });
+    },
+    get C27() {
+      return C[27] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "overflow",
+        [_Location_column]: 17,
+        [_Location_line]: 207,
+        [_Location_file]: null
+      });
+    },
+    get C28() {
+      return C[28] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 17,
+        [_Location_line]: 208,
+        [_Location_file]: null
+      });
+    },
+    get C25() {
+      return C[25] = dart.constList([C[26] || CT.C26, C[27] || CT.C27, C[28] || CT.C28], T._LocationL());
+    },
+    get C24() {
+      return C[24] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[25] || CT.C25,
+        [_Location_name]: null,
+        [_Location_column]: 22,
+        [_Location_line]: 205,
+        [_Location_file]: "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/syncfusion_flutter_pdfviewer-19.3.48-beta/lib/src/bookmark/bookmark_item.dart"
+      });
+    },
+    get C31() {
+      return C[31] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "top",
+        [_Location_column]: 15,
+        [_Location_line]: 202,
+        [_Location_file]: null
+      });
+    },
+    get C32() {
+      return C[32] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "right",
+        [_Location_column]: 15,
+        [_Location_line]: 203,
+        [_Location_file]: null
+      });
+    },
+    get C33() {
+      return C[33] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "left",
+        [_Location_column]: 15,
+        [_Location_line]: 204,
+        [_Location_file]: null
+      });
+    },
+    get C34() {
+      return C[34] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 15,
+        [_Location_line]: 205,
+        [_Location_file]: null
+      });
+    },
+    get C30() {
+      return C[30] = dart.constList([C[31] || CT.C31, C[32] || CT.C32, C[33] || CT.C33, C[34] || CT.C34], T._LocationL());
+    },
+    get C29() {
+      return C[29] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[30] || CT.C30,
+        [_Location_name]: null,
+        [_Location_column]: 13,
+        [_Location_line]: 201,
+        [_Location_file]: "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/syncfusion_flutter_pdfviewer-19.3.48-beta/lib/src/bookmark/bookmark_item.dart"
+      });
+    },
+    get C37() {
+      return C[37] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 27,
+        [_Location_line]: 221,
+        [_Location_file]: null
+      });
+    },
+    get C38() {
+      return C[38] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "size",
+        [_Location_column]: 21,
+        [_Location_line]: 222,
+        [_Location_file]: null
+      });
+    },
+    get C39() {
+      return C[39] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 21,
+        [_Location_line]: 223,
+        [_Location_file]: null
+      });
+    },
+    get C40() {
+      return C[40] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "semanticLabel",
+        [_Location_column]: 21,
+        [_Location_line]: 225,
+        [_Location_file]: null
+      });
+    },
+    get C36() {
+      return C[36] = dart.constList([C[37] || CT.C37, C[38] || CT.C38, C[39] || CT.C39, C[40] || CT.C40], T._LocationL());
+    },
+    get C35() {
+      return C[35] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[36] || CT.C36,
+        [_Location_name]: null,
+        [_Location_column]: 26,
+        [_Location_line]: 220,
+        [_Location_file]: "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/syncfusion_flutter_pdfviewer-19.3.48-beta/lib/src/bookmark/bookmark_item.dart"
+      });
+    },
+    get C43() {
+      return C[43] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onPressed",
+        [_Location_column]: 19,
+        [_Location_line]: 219,
+        [_Location_file]: null
+      });
+    },
+    get C44() {
+      return C[44] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 19,
+        [_Location_line]: 220,
+        [_Location_file]: null
+      });
+    },
+    get C42() {
+      return C[42] = dart.constList([C[43] || CT.C43, C[44] || CT.C44], T._LocationL());
+    },
+    get C41() {
+      return C[41] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[42] || CT.C42,
+        [_Location_name]: null,
+        [_Location_column]: 24,
+        [_Location_line]: 218,
+        [_Location_file]: "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/syncfusion_flutter_pdfviewer-19.3.48-beta/lib/src/bookmark/bookmark_item.dart"
+      });
+    },
+    get C47() {
+      return C[47] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "top",
+        [_Location_column]: 17,
+        [_Location_line]: 214,
+        [_Location_file]: null
+      });
+    },
+    get C48() {
+      return C[48] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "right",
+        [_Location_column]: 17,
+        [_Location_line]: 215,
+        [_Location_file]: null
+      });
+    },
+    get C49() {
+      return C[49] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 17,
+        [_Location_line]: 216,
+        [_Location_file]: null
+      });
+    },
+    get C50() {
+      return C[50] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "width",
+        [_Location_column]: 17,
+        [_Location_line]: 217,
+        [_Location_file]: null
+      });
+    },
+    get C51() {
+      return C[51] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 17,
+        [_Location_line]: 218,
+        [_Location_file]: null
+      });
+    },
+    get C46() {
+      return C[46] = dart.constList([C[47] || CT.C47, C[48] || CT.C48, C[49] || CT.C49, C[50] || CT.C50, C[51] || CT.C51], T._LocationL());
+    },
+    get C45() {
+      return C[45] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[46] || CT.C46,
+        [_Location_name]: null,
+        [_Location_column]: 22,
+        [_Location_line]: 213,
+        [_Location_file]: "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/syncfusion_flutter_pdfviewer-19.3.48-beta/lib/src/bookmark/bookmark_item.dart"
+      });
+    },
+    get C54() {
+      return C[54] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "visible",
+        [_Location_column]: 15,
+        [_Location_line]: 212,
+        [_Location_file]: null
+      });
+    },
+    get C55() {
+      return C[55] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 15,
+        [_Location_line]: 213,
+        [_Location_file]: null
+      });
+    },
+    get C53() {
+      return C[53] = dart.constList([C[54] || CT.C54, C[55] || CT.C55], T._LocationL());
+    },
+    get C52() {
+      return C[52] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[53] || CT.C53,
+        [_Location_name]: null,
+        [_Location_column]: 13,
+        [_Location_line]: 211,
+        [_Location_file]: "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/syncfusion_flutter_pdfviewer-19.3.48-beta/lib/src/bookmark/bookmark_item.dart"
+      });
+    },
+    get C58() {
+      return C[58] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 11,
+        [_Location_line]: 182,
+        [_Location_file]: null
+      });
+    },
+    get C57() {
+      return C[57] = dart.constList([C[58] || CT.C58], T._LocationL());
+    },
+    get C56() {
+      return C[56] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[57] || CT.C57,
+        [_Location_name]: null,
+        [_Location_column]: 16,
+        [_Location_line]: 181,
+        [_Location_file]: "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/syncfusion_flutter_pdfviewer-19.3.48-beta/lib/src/bookmark/bookmark_item.dart"
+      });
+    },
+    get C61() {
+      return C[61] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 9,
+        [_Location_line]: 169,
+        [_Location_file]: null
+      });
+    },
+    get C62() {
+      return C[62] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 9,
+        [_Location_line]: 170,
+        [_Location_file]: null
+      });
+    },
+    get C63() {
+      return C[63] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "foregroundDecoration",
+        [_Location_column]: 9,
+        [_Location_line]: 171,
+        [_Location_file]: null
+      });
+    },
+    get C64() {
+      return C[64] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 9,
+        [_Location_line]: 181,
+        [_Location_file]: null
+      });
+    },
+    get C60() {
+      return C[60] = dart.constList([C[61] || CT.C61, C[62] || CT.C62, C[63] || CT.C63, C[64] || CT.C64], T._LocationL());
+    },
+    get C59() {
+      return C[59] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[60] || CT.C60,
+        [_Location_name]: null,
+        [_Location_column]: 14,
+        [_Location_line]: 168,
+        [_Location_file]: "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/syncfusion_flutter_pdfviewer-19.3.48-beta/lib/src/bookmark/bookmark_item.dart"
+      });
+    },
+    get C67() {
+      return C[67] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onTap",
+        [_Location_column]: 7,
+        [_Location_line]: 163,
+        [_Location_file]: null
+      });
+    },
+    get C68() {
+      return C[68] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onTapDown",
+        [_Location_column]: 7,
+        [_Location_line]: 164,
+        [_Location_file]: null
+      });
+    },
+    get C69() {
+      return C[69] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onLongPress",
+        [_Location_column]: 7,
+        [_Location_line]: 165,
+        [_Location_file]: null
+      });
+    },
+    get C70() {
+      return C[70] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onPanCancel",
+        [_Location_column]: 7,
+        [_Location_line]: 166,
+        [_Location_file]: null
+      });
+    },
+    get C71() {
+      return C[71] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onPanEnd",
+        [_Location_column]: 7,
+        [_Location_line]: 167,
+        [_Location_file]: null
+      });
+    },
+    get C72() {
+      return C[72] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 7,
+        [_Location_line]: 168,
+        [_Location_file]: null
+      });
+    },
+    get C66() {
+      return C[66] = dart.constList([C[67] || CT.C67, C[68] || CT.C68, C[69] || CT.C69, C[70] || CT.C70, C[71] || CT.C71, C[72] || CT.C72], T._LocationL());
+    },
+    get C65() {
+      return C[65] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[66] || CT.C66,
+        [_Location_name]: null,
+        [_Location_column]: 33,
+        [_Location_line]: 162,
+        [_Location_file]: "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/syncfusion_flutter_pdfviewer-19.3.48-beta/lib/src/bookmark/bookmark_item.dart"
+      });
+    },
+    get C75() {
+      return C[75] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "cursor",
+        [_Location_column]: 9,
+        [_Location_line]: 236,
+        [_Location_file]: null
+      });
+    },
+    get C76() {
+      return C[76] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onEnter",
+        [_Location_column]: 9,
+        [_Location_line]: 237,
+        [_Location_file]: null
+      });
+    },
+    get C77() {
+      return C[77] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onExit",
+        [_Location_column]: 9,
+        [_Location_line]: 242,
+        [_Location_file]: null
+      });
+    },
+    get C78() {
+      return C[78] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 9,
+        [_Location_line]: 247,
+        [_Location_file]: null
+      });
+    },
+    get C74() {
+      return C[74] = dart.constList([C[75] || CT.C75, C[76] || CT.C76, C[77] || CT.C77, C[78] || CT.C78], T._LocationL());
+    },
+    get C73() {
+      return C[73] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[74] || CT.C74,
+        [_Location_name]: null,
+        [_Location_column]: 14,
+        [_Location_line]: 235,
+        [_Location_file]: "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/syncfusion_flutter_pdfviewer-19.3.48-beta/lib/src/bookmark/bookmark_item.dart"
+      });
+    }
+  }, false);
+  var C = Array(79).fill(void 0);
+  var I = [
+    "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/syncfusion_flutter_pdfviewer-19.3.48-beta/lib/src/bookmark/bookmark_item.dart",
+    "package:syncfusion_flutter_pdfviewer/src/bookmark/bookmark_item.dart"
+  ];
+  var title$ = dart.privateName(bookmark_item, "BookmarkItem.title");
+  var height$ = dart.privateName(bookmark_item, "BookmarkItem.height");
+  var textPosition$ = dart.privateName(bookmark_item, "BookmarkItem.textPosition");
+  var isBorderEnabled$ = dart.privateName(bookmark_item, "BookmarkItem.isBorderEnabled");
+  var isExpandIconVisible$ = dart.privateName(bookmark_item, "BookmarkItem.isExpandIconVisible");
+  var isBackIconVisible$ = dart.privateName(bookmark_item, "BookmarkItem.isBackIconVisible");
+  var onNavigate$ = dart.privateName(bookmark_item, "BookmarkItem.onNavigate");
+  var onExpandPressed$ = dart.privateName(bookmark_item, "BookmarkItem.onExpandPressed");
+  var onBackPressed$ = dart.privateName(bookmark_item, "BookmarkItem.onBackPressed");
+  var isMobileWebView$ = dart.privateName(bookmark_item, "BookmarkItem.isMobileWebView");
+  bookmark_item.BookmarkItem = class BookmarkItem extends framework.StatefulWidget {
+    get title() {
+      return this[title$];
+    }
+    set title(value) {
+      super.title = value;
+    }
+    get height() {
+      return this[height$];
+    }
+    set height(value) {
+      super.height = value;
+    }
+    get textPosition() {
+      return this[textPosition$];
+    }
+    set textPosition(value) {
+      super.textPosition = value;
+    }
+    get isBorderEnabled() {
+      return this[isBorderEnabled$];
+    }
+    set isBorderEnabled(value) {
+      super.isBorderEnabled = value;
+    }
+    get isExpandIconVisible() {
+      return this[isExpandIconVisible$];
+    }
+    set isExpandIconVisible(value) {
+      super.isExpandIconVisible = value;
+    }
+    get isBackIconVisible() {
+      return this[isBackIconVisible$];
+    }
+    set isBackIconVisible(value) {
+      super.isBackIconVisible = value;
+    }
+    get onNavigate() {
+      return this[onNavigate$];
+    }
+    set onNavigate(value) {
+      super.onNavigate = value;
+    }
+    get onExpandPressed() {
+      return this[onExpandPressed$];
+    }
+    set onExpandPressed(value) {
+      super.onExpandPressed = value;
+    }
+    get onBackPressed() {
+      return this[onBackPressed$];
+    }
+    set onBackPressed(value) {
+      super.onBackPressed = value;
+    }
+    get isMobileWebView() {
+      return this[isMobileWebView$];
+    }
+    set isMobileWebView(value) {
+      super.isMobileWebView = value;
+    }
+    createState() {
+      return new bookmark_item._BookmarkItemState.new();
+    }
+  };
+  (bookmark_item.BookmarkItem.new = function(opts) {
+    let title = opts && 'title' in opts ? opts.title : "";
+    if (title == null) dart.nullFailed(I[0], 49, 13, "title");
+    let height = opts && 'height' in opts ? opts.height : 48;
+    if (height == null) dart.nullFailed(I[0], 50, 12, "height");
+    let onNavigate = opts && 'onNavigate' in opts ? opts.onNavigate : null;
+    if (onNavigate == null) dart.nullFailed(I[0], 51, 21, "onNavigate");
+    let onExpandPressed = opts && 'onExpandPressed' in opts ? opts.onExpandPressed : null;
+    if (onExpandPressed == null) dart.nullFailed(I[0], 52, 21, "onExpandPressed");
+    let onBackPressed = opts && 'onBackPressed' in opts ? opts.onBackPressed : null;
+    if (onBackPressed == null) dart.nullFailed(I[0], 53, 21, "onBackPressed");
+    let textPosition = opts && 'textPosition' in opts ? opts.textPosition : 16;
+    if (textPosition == null) dart.nullFailed(I[0], 54, 12, "textPosition");
+    let isBorderEnabled = opts && 'isBorderEnabled' in opts ? opts.isBorderEnabled : false;
+    if (isBorderEnabled == null) dart.nullFailed(I[0], 55, 12, "isBorderEnabled");
+    let isExpandIconVisible = opts && 'isExpandIconVisible' in opts ? opts.isExpandIconVisible : false;
+    if (isExpandIconVisible == null) dart.nullFailed(I[0], 56, 12, "isExpandIconVisible");
+    let isBackIconVisible = opts && 'isBackIconVisible' in opts ? opts.isBackIconVisible : false;
+    if (isBackIconVisible == null) dart.nullFailed(I[0], 57, 12, "isBackIconVisible");
+    let isMobileWebView = opts && 'isMobileWebView' in opts ? opts.isMobileWebView : null;
+    if (isMobileWebView == null) dart.nullFailed(I[0], 58, 21, "isMobileWebView");
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    this[title$] = title;
+    this[height$] = height;
+    this[onNavigate$] = onNavigate;
+    this[onExpandPressed$] = onExpandPressed;
+    this[onBackPressed$] = onBackPressed;
+    this[textPosition$] = textPosition;
+    this[isBorderEnabled$] = isBorderEnabled;
+    this[isExpandIconVisible$] = isExpandIconVisible;
+    this[isBackIconVisible$] = isBackIconVisible;
+    this[isMobileWebView$] = isMobileWebView;
+    bookmark_item.BookmarkItem.__proto__.new.call(this, {$creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = bookmark_item.BookmarkItem.prototype;
+  dart.addTypeTests(bookmark_item.BookmarkItem);
+  dart.addTypeCaches(bookmark_item.BookmarkItem);
+  dart.setMethodSignature(bookmark_item.BookmarkItem, () => ({
+    __proto__: dart.getMethods(bookmark_item.BookmarkItem.__proto__),
+    createState: dart.fnType(bookmark_item._BookmarkItemState, [])
+  }));
+  dart.setLibraryUri(bookmark_item.BookmarkItem, I[1]);
+  dart.setFieldSignature(bookmark_item.BookmarkItem, () => ({
+    __proto__: dart.getFields(bookmark_item.BookmarkItem.__proto__),
+    title: dart.finalFieldType(core.String),
+    height: dart.finalFieldType(core.double),
+    textPosition: dart.finalFieldType(core.double),
+    isBorderEnabled: dart.finalFieldType(core.bool),
+    isExpandIconVisible: dart.finalFieldType(core.bool),
+    isBackIconVisible: dart.finalFieldType(core.bool),
+    onNavigate: dart.finalFieldType(dart.fnType(dart.void, [])),
+    onExpandPressed: dart.finalFieldType(dart.fnType(dart.void, [])),
+    onBackPressed: dart.finalFieldType(dart.fnType(dart.void, [])),
+    isMobileWebView: dart.finalFieldType(core.bool)
+  }));
+  var ___BookmarkItemState__color = dart.privateName(bookmark_item, "_#_BookmarkItemState#_color");
+  var ___BookmarkItemState__color_isSet = dart.privateName(bookmark_item, "_#_BookmarkItemState#_color#isSet");
+  var _pdfViewerThemeData = dart.privateName(bookmark_item, "_pdfViewerThemeData");
+  var _color = dart.privateName(bookmark_item, "_color");
+  var _handleBackToParent = dart.privateName(bookmark_item, "_handleBackToParent");
+  var _handleExpandBookmarkList = dart.privateName(bookmark_item, "_handleExpandBookmarkList");
+  var _handleCancelSelectionColor = dart.privateName(bookmark_item, "_handleCancelSelectionColor");
+  var _handleTap = dart.privateName(bookmark_item, "_handleTap");
+  var Color_value = dart.privateName(ui, "Color.value");
+  var _handleTapDown = dart.privateName(bookmark_item, "_handleTapDown");
+  var _handlePanEnd = dart.privateName(bookmark_item, "_handlePanEnd");
+  var _name = dart.privateName(box_border, "_name");
+  var BoxDecoration_shape = dart.privateName(box_decoration, "BoxDecoration.shape");
+  var BoxDecoration_backgroundBlendMode = dart.privateName(box_decoration, "BoxDecoration.backgroundBlendMode");
+  var BoxDecoration_gradient = dart.privateName(box_decoration, "BoxDecoration.gradient");
+  var BoxDecoration_boxShadow = dart.privateName(box_decoration, "BoxDecoration.boxShadow");
+  var BoxDecoration_borderRadius = dart.privateName(box_decoration, "BoxDecoration.borderRadius");
+  var BoxDecoration_border = dart.privateName(box_decoration, "BoxDecoration.border");
+  var BoxDecoration_image = dart.privateName(box_decoration, "BoxDecoration.image");
+  var BoxDecoration_color = dart.privateName(box_decoration, "BoxDecoration.color");
+  var _Location_parameterLocations = dart.privateName(widget_inspector, "_Location.parameterLocations");
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  bookmark_item._BookmarkItemState = class _BookmarkItemState extends framework.State$(bookmark_item.BookmarkItem) {
+    get [_color]() {
+      let t0;
+      return dart.test(this[___BookmarkItemState__color_isSet]) ? (t0 = this[___BookmarkItemState__color], t0) : dart.throw(new _internal.LateError.fieldNI("_color"));
+    }
+    set [_color](t0) {
+      if (t0 == null) dart.nullFailed(I[0], 106, 14, "null");
+      this[___BookmarkItemState__color_isSet] = true;
+      this[___BookmarkItemState__color] = t0;
+    }
+    didChangeDependencies() {
+      this[_pdfViewerThemeData] = pdfviewer_theme.SfPdfViewerTheme.of(this.context);
+      this[_color] = dart.nullCheck(dart.nullCheck(this[_pdfViewerThemeData]).bookmarkViewStyle.backgroundColor);
+      super.didChangeDependencies();
+    }
+    dispose() {
+      this[_pdfViewerThemeData] = null;
+      super.dispose();
+    }
+    [_handleBackToParent]() {
+      this[_color] = dart.nullCheck(dart.nullCheck(this[_pdfViewerThemeData]).bookmarkViewStyle.backgroundColor);
+      this.widget.onBackPressed();
+    }
+    [_handleExpandBookmarkList]() {
+      this[_color] = dart.nullCheck(dart.nullCheck(this[_pdfViewerThemeData]).bookmarkViewStyle.backgroundColor);
+      this.widget.onExpandPressed();
+    }
+    [_handleTap]() {
+      try {
+        this.widget.onNavigate();
+      } catch (e$) {
+        let e = dart.getThrown(e$);
+        if (core.Object.is(e)) {
+          this[_handleCancelSelectionColor]();
+        } else
+          throw e$;
+      }
+    }
+    [_handleTapDown](details) {
+      if (details == null) dart.nullFailed(I[0], 140, 38, "details");
+      this.setState(dart.fn(() => {
+        if (dart.test(pdfviewer_helper.kIsDesktop) && !dart.test(this.widget.isMobileWebView)) {
+          this[_color] = (C[0] || CT.C0).withOpacity(0.08);
+        } else {
+          this[_color] = dart.nullCheck(dart.nullCheck(this[_pdfViewerThemeData]).bookmarkViewStyle.selectionColor);
+        }
+      }, T.VoidTovoid()));
+    }
+    [_handlePanEnd](details) {
+      if (details == null) dart.nullFailed(I[0], 150, 37, "details");
+      this[_handleCancelSelectionColor]();
+    }
+    [_handleCancelSelectionColor]() {
+      this.setState(dart.fn(() => {
+        this[_color] = dart.nullCheck(dart.nullCheck(this[_pdfViewerThemeData]).bookmarkViewStyle.backgroundColor);
+      }, T.VoidTovoid()));
+    }
+    build(context) {
+      if (context == null) dart.nullFailed(I[0], 161, 29, "context");
+      let bookmarkItem = new gesture_detector.GestureDetector.new({onTap: dart.bind(this, _handleTap), onTapDown: dart.bind(this, _handleTapDown), onLongPress: dart.bind(this, _handleCancelSelectionColor), onPanCancel: dart.bind(this, _handleCancelSelectionColor), onPanEnd: dart.bind(this, _handlePanEnd), child: new container.Container.new({height: this.widget.height, color: this[_color], foregroundDecoration: dart.test(this.widget.isBorderEnabled) ? new box_decoration.BoxDecoration.new({border: new box_border.Border.new({bottom: new borders.BorderSide.new({color: dart.nullCheck(dart.nullCheck(this[_pdfViewerThemeData]).bookmarkViewStyle.titleSeparatorColor)})})}) : C[1] || CT.C1, child: new basic.Stack.new({children: T.JSArrayOfWidget().of([new visibility.Visibility.new({visible: this.widget.isBackIconVisible, child: new basic.Positioned.new({top: 13, left: 16, height: 24, width: 24, child: new button.RawMaterialButton.new({onPressed: dart.bind(this, _handleBackToParent), child: new icon.Icon.new(icons.Icons.arrow_back, {size: 24, color: dart.nullCheck(this[_pdfViewerThemeData]).bookmarkViewStyle.backIconColor, semanticLabel: "Previous level bookmark", $creationLocationd_0dea112b090073317d4: C[3] || CT.C3}), $creationLocationd_0dea112b090073317d4: C[9] || CT.C9}), $creationLocationd_0dea112b090073317d4: C[13] || CT.C13}), $creationLocationd_0dea112b090073317d4: C[20] || CT.C20}), new basic.Positioned.new({top: 16, right: 45, left: this.widget.textPosition, child: new text.Text.new(this.widget.title, {overflow: paragraph.TextOverflow.ellipsis, style: dart.nullCheck(this[_pdfViewerThemeData]).bookmarkViewStyle.titleTextStyle, $creationLocationd_0dea112b090073317d4: C[24] || CT.C24}), $creationLocationd_0dea112b090073317d4: C[29] || CT.C29}), new visibility.Visibility.new({visible: this.widget.isExpandIconVisible, child: new basic.Positioned.new({top: 13, right: 16, height: 24, width: 24, child: new button.RawMaterialButton.new({onPressed: dart.bind(this, _handleExpandBookmarkList), child: new icon.Icon.new(icons.Icons.arrow_forward_ios, {size: 14, color: dart.nullCheck(this[_pdfViewerThemeData]).bookmarkViewStyle.navigationIconColor, semanticLabel: "Next level bookmark", $creationLocationd_0dea112b090073317d4: C[35] || CT.C35}), $creationLocationd_0dea112b090073317d4: C[41] || CT.C41}), $creationLocationd_0dea112b090073317d4: C[45] || CT.C45}), $creationLocationd_0dea112b090073317d4: C[52] || CT.C52})]), $creationLocationd_0dea112b090073317d4: C[56] || CT.C56}), $creationLocationd_0dea112b090073317d4: C[59] || CT.C59}), $creationLocationd_0dea112b090073317d4: C[65] || CT.C65});
+      if ((true || dart.test(io.Platform.isMacOS)) && !dart.test(this.widget.isMobileWebView)) {
+        return new basic.MouseRegion.new({cursor: mouse_cursor.SystemMouseCursors.click, onEnter: dart.fn(details => {
+            if (details == null) dart.nullFailed(I[0], 237, 37, "details");
+            this.setState(dart.fn(() => {
+              this[_color] = (C[0] || CT.C0).withOpacity(0.04);
+            }, T.VoidTovoid()));
+          }, T.PointerEnterEventTovoid()), onExit: dart.fn(details => {
+            if (details == null) dart.nullFailed(I[0], 242, 35, "details");
+            this.setState(dart.fn(() => {
+              this[_color] = dart.nullCheck(dart.nullCheck(this[_pdfViewerThemeData]).bookmarkViewStyle.backgroundColor);
+            }, T.VoidTovoid()));
+          }, T.PointerExitEventTovoid()), child: bookmarkItem, $creationLocationd_0dea112b090073317d4: C[73] || CT.C73});
+      }
+      return bookmarkItem;
+    }
+  };
+  (bookmark_item._BookmarkItemState.new = function() {
+    this[___BookmarkItemState__color] = null;
+    this[___BookmarkItemState__color_isSet] = false;
+    this[_pdfViewerThemeData] = null;
+    bookmark_item._BookmarkItemState.__proto__.new.call(this);
+    ;
+  }).prototype = bookmark_item._BookmarkItemState.prototype;
+  dart.addTypeTests(bookmark_item._BookmarkItemState);
+  dart.addTypeCaches(bookmark_item._BookmarkItemState);
+  dart.setMethodSignature(bookmark_item._BookmarkItemState, () => ({
+    __proto__: dart.getMethods(bookmark_item._BookmarkItemState.__proto__),
+    [_handleBackToParent]: dart.fnType(dart.void, []),
+    [_handleExpandBookmarkList]: dart.fnType(dart.void, []),
+    [_handleTap]: dart.fnType(dart.void, []),
+    [_handleTapDown]: dart.fnType(dart.void, [tap.TapDownDetails]),
+    [_handlePanEnd]: dart.fnType(dart.void, [drag_details.DragEndDetails]),
+    [_handleCancelSelectionColor]: dart.fnType(dart.void, []),
+    build: dart.fnType(framework.Widget, [framework.BuildContext])
+  }));
+  dart.setGetterSignature(bookmark_item._BookmarkItemState, () => ({
+    __proto__: dart.getGetters(bookmark_item._BookmarkItemState.__proto__),
+    [_color]: ui.Color
+  }));
+  dart.setSetterSignature(bookmark_item._BookmarkItemState, () => ({
+    __proto__: dart.getSetters(bookmark_item._BookmarkItemState.__proto__),
+    [_color]: ui.Color
+  }));
+  dart.setLibraryUri(bookmark_item._BookmarkItemState, I[1]);
+  dart.setFieldSignature(bookmark_item._BookmarkItemState, () => ({
+    __proto__: dart.getFields(bookmark_item._BookmarkItemState.__proto__),
+    [___BookmarkItemState__color]: dart.fieldType(dart.nullable(ui.Color)),
+    [___BookmarkItemState__color_isSet]: dart.fieldType(core.bool),
+    [_pdfViewerThemeData]: dart.fieldType(dart.nullable(pdfviewer_theme.SfPdfViewerThemeData))
+  }));
+  dart.defineLazy(bookmark_item, {
+    /*bookmark_item._kPdfBackIconWidth*/get _kPdfBackIconWidth() {
+      return 24;
+    },
+    /*bookmark_item._kPdfBackIconHeight*/get _kPdfBackIconHeight() {
+      return 24;
+    },
+    /*bookmark_item._kPdfBackIconSize*/get _kPdfBackIconSize() {
+      return 24;
+    },
+    /*bookmark_item._kPdfExpandIconWidth*/get _kPdfExpandIconWidth() {
+      return 24;
+    },
+    /*bookmark_item._kPdfExpandIconHeight*/get _kPdfExpandIconHeight() {
+      return 24;
+    },
+    /*bookmark_item._kPdfExpandIconSize*/get _kPdfExpandIconSize() {
+      return 14;
+    },
+    /*bookmark_item._kPdfBackIconTopPosition*/get _kPdfBackIconTopPosition() {
+      return 13;
+    },
+    /*bookmark_item._kPdfBackIconLeftPosition*/get _kPdfBackIconLeftPosition() {
+      return 16;
+    },
+    /*bookmark_item._kPdTitleTextTopPosition*/get _kPdTitleTextTopPosition() {
+      return 16;
+    },
+    /*bookmark_item._kPdfTitleTextRightPosition*/get _kPdfTitleTextRightPosition() {
+      return 45;
+    },
+    /*bookmark_item._kPdfExpandIconTopPosition*/get _kPdfExpandIconTopPosition() {
+      return 13;
+    },
+    /*bookmark_item._kPdfExpandIconRightPosition*/get _kPdfExpandIconRightPosition() {
+      return 16;
+    }
+  }, false);
+  dart.trackLibraries("packages/syncfusion_flutter_pdfviewer/src/bookmark/bookmark_item.dart", {
+    "package:syncfusion_flutter_pdfviewer/src/bookmark/bookmark_item.dart": bookmark_item
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["bookmark_item.dart"],"names":[],"mappings":"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","file":"../../../../../../../../../E:/packages/syncfusion_flutter_pdfviewer/src/bookmark/bookmark_item.dart.lib.js"}');
+  // Exports:
+  return {
+    src__bookmark__bookmark_item: bookmark_item
+  };
+}));
+
+//# sourceMappingURL=bookmark_item.dart.lib.js.map
